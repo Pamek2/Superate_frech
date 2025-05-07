@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+</head>
+<body>
+    <script>
+      //desafio 1
+      console.log("¡Hola, mundo!");
+    //desafio 2
+      let edad =16;
+        console.log(edad);
+//desafio 3
+        let nombre="Katherine Alvarado "
+        document.write(nombre);
+          let esEstudiante = true;
+        document.write(esEstudiante);
+        //desafio 4
+        let num1 = 5;
+        let num2 = 10;
+        console.log(num1 + num2);
+        console.log(num2 - num1);
+        console.log(num1 * num2);
+        console.log(num2 / num1);
+
+
+
+
+    </script>
+
+</body>
+</html>
