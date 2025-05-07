@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos en JavaScript</title>
+</head>
+<body>
+    <h1>Prueba de Operadores Lógicos en JavaScript</h1>
+
+    <label for="edad">Ingresa tu edad: </label>
+    <input type="number" id="edad" placeholder="Ej. 20">
+    <button onclick="evaluarOperadores()">Ver Resultado</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function evaluarOperadores() {
+            // Obtener la edad ingresada por el usuario
+            let edad = parseInt(document.getElementById("edad").value);
+            let tieneMembresia = true;
+            let esFinDeSemana = true; // Lo dejamos como fin de semana para este ejemplo
+            let esLunes = false; // Lo dejamos como no lunes para este ejemplo
+
+            let resultado = "";
+
+            // Verificar si la edad es válida
+            if (isNaN(edad) || edad <= 0) {
+                resultad0o = "Por favor, ingresa una edad válida.";
+            } else {
+                // Usando el operador AND (&&)
+                if (edad >= 18 && tieneMembresia) {
+                    resultado += "Puedes acceder al club.<br>";
+                } else {
+                    resultado += "No puedes acceder al club.<br>";
+                }
+
+                // Usando el operador OR (||)
+                if (edad >= 18 || esFinDeSemana) {
+                    resultado += "Tienes permiso para asistir a la fiesta.<br>";
+                } else {
+                    resultado += "No tienes permiso para asistir a la fiesta.<br>";
+                }
+
+                // Usando el operador NOT (!)
+                if (!esLunes) {
+                    resultado += "Hoy no es lunes, puedes relajarte.<br>";
+                } else {
+                    resultado += "Hoy es lunes, a trabajar!<br>";
+                }
+            }
+
+            // Mostrar el resultado en el párrafo
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
